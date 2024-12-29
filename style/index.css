@@ -399,14 +399,15 @@ span {
   font-size: 1.5rem;
   color: var(--main-color);
   font-family: var(--txt-font-family2);
+  font-weight: 500;
 }
-.line-txt {
+.popu-food .popu-txt .line-txt {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.line {
+.popu-food .popu-txt .line {
   flex: 1;
   width: 50px;
   height: 3px;
@@ -485,6 +486,94 @@ span {
   height: 100%;
   object-fit: cover;
 }
+.why {
+  width: 100%;
+  height: 50vh;
+  margin-top: 5%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.why .y-img {
+  width: 30%;
+  height: 100%;
+}
+.why .y-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.why .y-img img:hover {
+  transform: scale(1.1);
+  border-radius: 20px;
+}
+.why .y-txt {
+  width: 50%;
+  height: 100%;
+  padding: 50px 50px;
+}
+.why .y-txt h2 {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 10px 0px;
+  color: var(--main-color);
+}
+.why .y-txt p {
+  font-family: Arial;
+  font-size: 1.3rem;
+  width: 79%;
+  padding: 10px 0px;
+}
+.Chef {
+  width: 100%;
+  height: 50vh;
+  margin-top: 5%;
+  background-color: aqua;
+}
+.chef-txt {
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+}
+.Chef .chef-txt h3 {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-family: var(--txt-font-family2);
+  font-weight: 500;
+}
+.Chef .chef-txt .line-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Chef .chef-txt .line {
+  width: 50px;
+  height: 3px;
+  background-color: var(--main-color);
+}
+.Chef .chef-txt h1 {
+  font-family: "Noto Sans JP", serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.chef-member {
+  width: 100%;
+  height: 80%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.chef-member .chef-box {
+  width: 20%;
+  height: 20%;
+  background-color: yellow;
+  /* flex-grow: 1; */
+  flex-basis: 200px;
+}
 footer {
   background-color: var(--sec-color);
   width: 100%;
@@ -492,6 +581,7 @@ footer {
   color: white;
   margin-top: 5%;
 }
+
 /* ResponseView */
 @media only screen and (max-width: 768px) {
   /* body {
