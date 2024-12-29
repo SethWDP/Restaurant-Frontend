@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restuarant | Home</title>
+    <link rel="stylesheet" href="/Restaurant/style/index.css" />
+    <link rel="icon" href="/Restaurant/assets/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 id="#home">Khmer-Restaurant</h2>
+        <ul id="menulist">
+          <li><a href="/Restaurant/html/index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/Restaurant/html/menu.html">Food Menu</a></li>
+          <li><a href="/Restaurant/html/book.html">Service</a></li>
+          <button>Book-Now</button>
+        </ul>
+        <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="home">
+      <main class="info">
+        <div class="info-txt">
+          <h1 data-aos="fade-right" data-aos-duration="5000">
+            Enjoy Our <span style="color: orange">Delicious Food </span> <br />
+            in Your Healthy Life
+          </h1>
+          <p data-aos="fade-right" data-aos-duration="1000">
+            we are committed to helping you live more healthily by providing
+            quality.
+          </p>
+          <button data-aos="fade-right" data-aos-duration="5000">
+            Book-Now <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+        </div>
+        <div class="info-img">
+          <img src="../assets/baycha.jpg" alt="" />
+        </div>
+      </main>
+      <section class="service-box">
+        <div
+          class="box"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <i class="fa-regular fa-chess-queen"></i>
+          <h3>Chef</h3>
+          <p>
+            "Our expert chefs craft delicious meals with the finest ingredients,
+            ensuring every bite is a delightful experience tailored to your
+            taste."
+          </p>
+        </div>
+        <div
+          class="box"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Food Quality</h3>
+          <p>
+            "We prioritize top-notch food quality, using fresh ingredients and
+            strict hygiene standards to deliver meals that satisfy."
+          </p>
+        </div>
+        <div
+          class="box"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <i class="fa-solid fa-cart-plus"></i>
+          <h3>Online order</h3>
+          <p>
+            "Convenient online ordering lets you select your favorite dishes
+            from our menu, ensuring fast delivery right to your door."
+          </p>
+        </div>
+        <div
+          class="box"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <i class="fa-solid fa-headset"></i>
+          <h3>24/7 Service</h3>
+          <p>
+            "Available anytime, our 24/7 service ensures that you can enjoy your
+            favorite meals whenever you need it."
+          </p>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="ab-img">
+          <div class="img-item">
+            <div class="item1">
+              <div class="item1-1" data-aos="fade-down">
+                <img
+                  src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Restaurant-img"
+                />
+              </div>
+              <div class="item1-2">
+                <div class="item1-2-3" data-aos="fade-up">
+                  <img
+                    style="width: 100%; height: 100%; object-fit: cover"
+                    src="https://images.pexels.com/photos/541216/pexels-photo-541216.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="item1">
+              <div
+                class="item1-2"
+                style="
+                  display: flex;
+                  align-items: flex-end;
+                  justify-content: start;
+                "
+              >
+                <div class="item1-2-4" data-aos="fade-down">
+                  <img
+                    src="https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="item1-1" data-aos="fade-up">
+                <img src="../assets/nombonjok.jpg" alt="Restaurant-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="ab-describe">
+          <h2>About-Us</h2>
+          <h1>
+            Welcome to
+            <i class="fa-solid fa-utensils"></i>
+            <span>Khmer-Restaurant </span>
+          </h1>
+          <p>
+            "Welcome to <span>Khmer-Restaurant </span>, where culinary artistry
+            meets warm hospitality. We craft dishes using fresh, locally-sourced
+            ingredients, blending tradition with innovation. Our inviting
+            ambiance is perfect for gatherings, celebrations, or a quiet meal.
+            At <span>Khmer-Restaurant </span>, every bite tells a story of
+            passion and flavor. Come savor the experience with us!"
+          </p>
+          <div class="box-count">
+            <div class="exp">
+              <div class="exp-num">
+                <h2 data-count="10">0</h2>
+              </div>
+              <div class="exp-txt">
+                <p>
+                  Year of <br />
+                  <strong>EXPERIENCE</strong>
+                </p>
+              </div>
+            </div>
+            <div class="campus">
+              <div class="exp-num">
+                <h2 data-count="6">0</h2>
+              </div>
+              <div class="exp-txt">
+                <p>
+                  <strong>Branches</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <button>Read More</button>
+        </article>
+      </section>
+
+      <section class="popu-food">
+        <div class="popu-txt">
+          <div class="line-txt">
+            <span class="line"></span>
+            <h3>Food Menu</h3>
+            <span class="line"></span>
+          </div>
+
+          <h1>Most Popular Food</h1>
+        </div>
+        <div class="food-box">
+          <span class="img-box">
+            <img src="../assets/amok2.jpg" alt="" />
+            <p>Amok</p>
+          </span>
+          <span class="img-box"
+            ><img src="../assets/curry.jpg" alt="" />
+            <p>Curry</p>
+          </span>
+          <span class="img-box"
+            ><img src="../assets/sushi.jpg" alt="" />
+            <p>Sushi</p>
+          </span>
+          <span class="img-box"
+            ><img src="../assets/Phở.jpg" alt="" />
+            <p>Phở</p>
+          </span>
+          <span class="img-box"
+            ><img src="../assets/kuytev.jpg" alt="" />
+            <p>Key Tiev</p>
+          </span>
+          <span class="img-box"
+            ><img src="../assets/baycha.jpg" alt="" />
+            <p>HealthyFood</p>
+          </span>
+        </div>
+        <div class="des-popu-food">
+          <div class="des-popu-txt">
+            <h2>Our Restaurant Popular Food</h2>
+            <p>
+              "Our restaurant is celebrated for its signature dishes that keep
+              customers coming back for more. From the rich, savory flavors of
+              our [specific dish] to the delicate and delightful taste of our
+              [specific dish], each plate is crafted with care and passion. We
+              take pride in using the freshest ingredients to create meals that
+              are not just food, but an experience. Whether you're here for a
+              cozy dinner or a festive celebration, our standout dishes promise
+              to make every visit memorable."
+            </p>
+          </div>
+          <div class="des-popu-img">
+            <img src="../assets/amok2.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer></footer>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="index.js"></script>
+</html>
