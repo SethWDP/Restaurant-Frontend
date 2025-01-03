@@ -24,8 +24,8 @@
           <li><a href="/Restaurant/html/index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="/Restaurant/html/menu.html">Food Menu</a></li>
-          <li><a href="/Restaurant/html/book.html">Service</a></li>
-          <button>Book-Now</button>
+          <li><a href="#service">Service</a></li>
+          <button><a href=".//book.html">Book-Now</a></button>
         </ul>
         <div class="menu-icon">
           <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
@@ -44,15 +44,16 @@
             we are committed to helping you live more healthily by providing
             quality.
           </p>
-          <button data-aos="fade-right" data-aos-duration="5000">
-            Book-Now <i class="fa-solid fa-arrow-right-long"></i>
-          </button>
+          <a href="./book.html">
+            <button data-aos="fade-right" data-aos-duration="5000">
+              Book-Now <i class="fa-solid fa-arrow-right-long"></i></button
+          ></a>
         </div>
         <div class="info-img">
           <img src="../assets/baycha.jpg" alt="" />
         </div>
       </main>
-      <section class="service-box">
+      <section class="service-box" id="service">
         <div
           class="box"
           data-aos="fade-right"
@@ -201,7 +202,7 @@
             <span class="line"></span>
           </div>
 
-          <h1>Most Popular Food</h1>
+          <h1>Most Popular Foods</h1>
         </div>
         <div class="food-box">
           <div class="f-box-1">
@@ -273,11 +274,8 @@
           </p>
         </div>
       </section>
-      <section
-        class="Chef"
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
-      >
+
+      <section class="Chef" data-aos="fade-up">
         <div class="chef-txt">
           <div class="line-txt">
             <span class="line"></span>
@@ -305,8 +303,69 @@
           </div>
         </div>
       </section>
+      <footer class="footer">
+        <div class="footer-content">
+          <!-- About Section -->
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              We are passionate about delivering the best dining experience to
+              our customers. Our restaurant combines traditional flavors with
+              modern cuisine.
+            </p>
+            <div class="contact-info">
+              <p><i class="fas fa-phone"></i> +855 12345678</p>
+              <p><i class="fas fa-envelope"></i> info@khmer_restaurant.com</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> #271 Street,Toul Kork,
+                Phnom Penh
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#menu">Food-Menu</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Opening Hours Section -->
+          <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <ul class="hours">
+              <li>Monday - Friday: 9AM - 10PM</li>
+              <li>Saturday: 10AM - 11PM</li>
+              <li>Sunday: 10AM - 9PM</li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for updates and special offers.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Your Restaurant. All rights reserved.</p>
+        </div>
+      </footer>
     </section>
-    <footer></footer>
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="index.js"></script>

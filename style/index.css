@@ -386,10 +386,8 @@ span {
   width: 100%;
   height: 70vh;
   margin-top: 5%;
-  background-color: yellow;
 }
 .popu-food .popu-txt {
-  background-color: #eb5b00;
   width: 100%;
   height: 20%;
   display: flex;
@@ -427,14 +425,12 @@ span {
   justify-content: center;
   align-items: center;
   gap: 5%;
-  background-color: blue;
 }
 .food-box .f-box-1 {
   display: flex;
   gap: 3rem;
 }
 .des-popu-food {
-  background-color: greenyellow;
   width: 100%;
   height: 54%;
 }
@@ -468,7 +464,6 @@ span {
   width: 50%;
   height: 100%;
   background-color: var(--nav-responsive);
-  border-radius: 10px 0px 0px 10px;
 }
 .des-popu-txt h2 {
   font-family: var(--txt-font-family2);
@@ -497,6 +492,7 @@ span {
   height: 100%;
   object-fit: cover;
 }
+/* WHy people choose us */
 .why {
   width: 100%;
   height: 50vh;
@@ -601,12 +597,164 @@ span {
   text-align: center;
   padding: 15px 0px;
 }
-footer {
-  background-color: var(--sec-color);
+/* footer */
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 0 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--main-color);
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #b3b3b3;
+}
+
+/* Quick Links Styling */
+.quick-links {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 12px;
+}
+
+.quick-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: var(--main-color);
+  padding-left: 5px;
+}
+
+/* Hours List Styling */
+.hours {
+  list-style: none;
+  padding: 0;
+}
+
+.hours li {
+  color: #b3b3b3;
+  margin-bottom: 12px;
+}
+
+/* Newsletter Form Styling */
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form input {
   width: 100%;
-  height: 50vh;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: var(--main-color);
   color: white;
-  margin-top: 5%;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #ff3333;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.5rem;
+}
+.fa-facebook,
+.fa-telegram,
+.fa-instagram {
+  transition: color 0.3s ease;
+}
+.fa-facebook:hover {
+  color: #3797f7;
+}
+.fa-telegram:hover {
+  color: #63b4dc;
+}
+.fa-instagram:hover {
+  color: orange;
+}
+/* Contact Info Styling */
+.contact-info p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  font-size: 1rem;
+  color: var(--main-color);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  color: #b3b3b3;
+  font-size: 0.9rem;
 }
 
 /* ResponseView */
@@ -719,7 +867,6 @@ footer {
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: red;
   }
   .about .ab-img {
     width: 100%;
@@ -800,53 +947,126 @@ footer {
   }
   /* Popular Food section */
   .popu-food {
-    background-color: violet;
     width: 100%;
-    height: auto;
+    height: 110vh;
   }
   .popu-txt {
-    background-color: rebeccapurple;
     width: 100%;
     height: 10%;
   }
   .food-box {
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+  }
+  .food-box .img-box {
+    width: 80px;
+    height: 80px;
   }
   .f-box-1 {
-    background-color: yellow;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
   }
   .des-popu-food {
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 4%;
+    height: 100%;
   }
   .des-popu-txt {
     width: 100%;
+    height: auto;
   }
   .des-popu-txt p {
     width: 100%;
     padding: 20px 30px;
   }
   .des-popu-img {
-    width: 100%;
-    height: 50%;
-  }
-  .why {
-    background-color: #f5f7f8;
-    width: 100%;
-    height: 50%;
     display: none;
   }
-  .Chef {
-    background-color: #eb5b00;
+  .why {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .why .y-img {
     width: 100%;
     height: 50%;
-    margin-top: 100%;
+  }
+  .why .y-txt {
+    width: 100%;
+    height: auto;
+    padding: 0px 10px;
+  }
+  .why .y-txt h2 {
+    font-size: 1.7rem;
+  }
+  .why .y-txt p {
+    font-size: 1.3rem;
+    width: 90%;
+  }
+  .Chef {
+    /* background-color: #eb5b00; */
+    width: 100%;
+    height: 170vh;
+  }
+  .Chef .chef-txt {
+    height: 10%;
+  }
+  .Chef .chef-member {
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+  }
+  .Chef .chef-member .chef-box {
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    width: 100%;
+    height: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Chef .chef-member .chef-box img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* footer */
+
+  .footer-section {
+    flex: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    text-align: center;
+  }
+
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-section p,
+  .contact-info,
+  .quick-links,
+  .hours {
+    text-align: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
   }
 }
 
