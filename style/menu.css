@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* This page is about food-menu */
+.food-menu {
+  width: 100%;
+  height: 100vh;
+}
+/* Image background */
+.food-menu .info {
+  width: 100%;
+  height: 500px;
+  background-image: url("/Restaurant/assets/sushi.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.food-menu .info::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0f172bb0;
+}
+/* txt on img background */
+.f-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 5rem;
+  position: absolute;
+}
+.f-txt h1 {
+  color: white;
+  font-family: "Baloo 2", serif;
+  font-size: 7rem;
+}
+/* design text in popou food  */
+.txt-popu-food {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txt-popu-food .popu-txt .line-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.txt-popu-food .popu-txt h3 {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-family: var(--txt-font-family2);
+  font-weight: 500;
+}
+.txt-popu-food .popu-txt .line {
+  /* flex: 1; */
+  width: 45px;
+  height: 3px;
+  background-color: var(--main-color);
+}
+.txt-popu-food .popu-txt h1 {
+  font-family: "Noto Sans JP", serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* list all food that has in restaurant */
+/* section show food */
+.list-food {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
