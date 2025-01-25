@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bgcolor: #f3edea;
+  --iconcolor: #efc239;
+  --btncolor: #efc239;
+  --desccolor: #7d7d7d;
+  --font: Allison;
+}
 /* This page is about food-menu */
 .food-menu {
   width: 100%;
@@ -78,6 +85,129 @@
 /* section show food */
 .list-food {
   width: 100%;
-  height: 100vh;
-  background-color: red;
+  height: auto;
+}
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #d0d0d0;
+}
+
+.filter-button.active {
+  background-color: #ffb200;
+  color: white;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  width: 17rem;
+  height: 22rem;
+  background-color: var(--bgcolor);
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.item:hover {
+  transform: translateY(-5px);
+}
+.item .img {
+  width: 100%;
+  height: 60%;
+}
+.item .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.item .f-name {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item .f-name h2 {
+  font-size: 1.6rem;
+}
+.item .f-name .icon i {
+  font-size: 1rem;
+  color: var(--iconcolor);
+}
+.item .desc {
+  width: 100%;
+  height: 15%;
+  font-size: 1rem;
+  color: var(--desccolor);
+}
+.item .price-btn {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item .price-btn .price {
+  font-size: 1.5rem;
+}
+.item .price-btn .btn button {
+  background-color: var(--btncolor);
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  width: 10rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.item .price-btn .btn button i {
+  font-size: 1rem;
+}
+.item .price-btn .btn button:hover {
+  background-color: #ffb300de;
+}
+.hidden {
+  display: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 768px) {
+  .f-txt h1 {
+    font-size: 4rem;
+  }
+  .txt-popu-food .popu-txt h1 {
+    text-align: center;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -42,3 +42,4 @@ window.addEventListener("scroll", function () {
     activated = true; // Prevent the animation from repeating
   }
 });
+console.log(55555);

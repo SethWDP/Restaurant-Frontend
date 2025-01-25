@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Restuarant | Food-Menu</title>
+    <link rel="icon" href="/Restaurant/assets/icon.png" />
     <link rel="stylesheet" href="/Restaurant/style/index.css" />
     <link rel="stylesheet" href="/Restaurant/style/menu.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -35,10 +44,411 @@
             <h3>Food Menu</h3>
             <span class="line"></span>
           </div>
-          <h1>Most Popular Foods</h1>
+          <h1 data-aos="fade-right" data-aos-duration="5000">
+            Most Popular Foods
+          </h1>
         </div>
       </article>
-      <section class="list-food"></section>
+      <section class="list-food">
+        <div class="container">
+          <div class="filter-buttons">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="khfood">
+              Khmer Food
+            </button>
+            <button class="filter-button" data-filter="jpfood">
+              Japanese Food
+            </button>
+            <button class="filter-button" data-filter="vnfood">
+              Vietnam Food
+            </button>
+            <button class="filter-button" data-filter="bffood">
+              Breakfast Food
+            </button>
+            <button class="filter-button" data-filter="dnfood">
+              Dinner Food
+            </button>
+          </div>
+
+          <div class="items">
+            <!-- 1 -->
+            <div class="item" data-category="khfood">
+              <div class="img">
+                <img src="../assets/curry.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>សម្លការី</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>15000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="item" data-category="vnfood">
+              <div class="img">
+                <img src="../assets/dish8.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>Phở</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>8000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="item" data-category="khfood">
+              <div class="img">
+                <img src="../assets/amok2.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>អាម៉ុក</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>10000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="item" data-category="jpfood">
+              <div class="img">
+                <img src="../assets/sushi.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>Sushi</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>12000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="item" data-category="bffood">
+              <div class="img">
+                <img src="../assets/kuytev.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>គុយទាវ</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>8000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="item" data-category="dnfood">
+              <div class="img">
+                <img src="../assets/dish5i.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>ញាំបង្គារ</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>10000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="item" data-category="vnfood">
+              <div class="img">
+                <img src="../assets/dish10.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>សាយ៉រ</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>5000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="item" data-category="jpfood">
+              <div class="img">
+                <img src="../assets/ramen.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>Ramen</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>12000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="item" data-category="dnfood">
+              <div class="img">
+                <img src="../assets/dish4.png" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>មាន់បំពង</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>5000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 10 -->
+            <div class="item" data-category="khfood">
+              <div class="img">
+                <img src="../assets/Vibrant Cambodian Lap Khmer.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>ភ្លារសាច់គោ</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>10000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 11 -->
+            <div class="item" data-category="dnfood">
+              <div class="img">
+                <img src="../assets/sachko.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>សាច់គោអាំង</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>4000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 12 -->
+            <div class="item" data-category="khfood">
+              <div class="img">
+                <img src="../assets/nombonjok.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>នំបញ្ចុក</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>4000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 13 -->
+            <div class="item" data-category="bffood">
+              <div class="img">
+                <img src="../assets/baycha.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>បាយឆា</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>5000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 14 -->
+            <div class="item" data-category="bffood">
+              <div class="img">
+                <img src="../assets/dish-2.png" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>ផ្លែឈើ</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>10000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 15 -->
+            <div class="item" data-category="khfood">
+              <div class="img">
+                <img src="../assets/cha.jpg" alt="" />
+              </div>
+              <div class="f-name">
+                <div class="txt"><h2>ឆាត្រកួន</h2></div>
+                <div class="icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" style="color: black"></i>
+                </div>
+              </div>
+              <div class="desc"></div>
+              <div class="price-btn">
+                <div class="price"><p>4000៛</p></div>
+                <div class="btn">
+                  <button>
+                    Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer class="footer">
         <div class="footer-content">
           <!-- About Section -->
@@ -98,9 +508,13 @@
 
         <!-- Bottom Bar -->
         <div class="footer-bottom">
-          <p>&copy; 2025 Your Restaurant. All rights reserved.</p>
+          <p>&copy; 2025 Khmer-Restaurant. All rights reserved.</p>
         </div>
       </footer>
     </section>
+    <script src="buttonfilter.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
   </body>
+  <!-- <script src="foodcard.js"></script> -->
 </html>

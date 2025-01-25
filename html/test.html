@@ -1,423 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <style>
-      /* Original CSS remains the same */
-      .Chef {
-        width: 100%;
-        height: 50vh;
-        margin-top: 5%;
-      }
-      .chef-txt {
-        width: 100%;
-        height: 10vh;
-        text-align: center;
-      }
-      .Chef .chef-txt h3 {
-        font-size: 1.5rem;
-        color: var(--main-color);
-        font-family: var(--txt-font-family2);
-        font-weight: 500;
-      }
-      .Chef .chef-txt .line-txt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-      .Chef .chef-txt .line {
-        width: 50px;
-        height: 3px;
-        background-color: var(--main-color);
-      }
-      .Chef .chef-txt h1 {
-        font-family: "Noto Sans JP", serif;
-        font-size: 2rem;
-        font-weight: bold;
-      }
-      .chef-member {
-        width: 100%;
-        height: 80%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-      .chef-member .chef-box {
-        height: 35vh;
-        width: 20%;
-        padding: 10px 25px;
-      }
-      .chef-box img {
-        width: 250px;
-        height: 250px;
-        object-fit: contain;
-        clip-path: circle();
-        background-color: #343e55;
-        transition: all 0.5s ease-in-out;
-      }
-      .chef-box img:hover {
-        scale: 1.1;
-      }
-      .chef-box h2 {
-        font-family: Arial;
-        font-size: 1.5rem;
-        color: var(--nav-responsive);
-        font-weight: 700;
-        text-align: center;
-        padding: 15px 0px;
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
       }
 
-      /* Large Devices (laptops/desktops, 1200px and down) */
-      @media screen and (max-width: 1200px) {
-        .chef-member .chef-box {
-          width: 25%;
-        }
-        .chef-box img {
-          width: 200px;
-          height: 200px;
-        }
-      }
-
-      /* Medium Devices (tablets and smaller laptops, 992px and down) */
-      @media screen and (max-width: 992px) {
-        .Chef {
-          height: auto;
-          padding: 20px 0;
-        }
-        .chef-member {
-          height: auto;
-        }
-        .chef-member .chef-box {
-          width: 50%;
-          height: auto;
-          margin-bottom: 20px;
-        }
-        .Chef .chef-txt h1 {
-          font-size: 1.8rem;
-        }
-        .Chef .chef-txt h3 {
-          font-size: 1.3rem;
-        }
-      }
-
-      /* Small Devices (landscape phones, 768px and down) */
-      @media screen and (max-width: 768px) {
-        .chef-box img {
-          width: 180px;
-          height: 180px;
-        }
-        .chef-box h2 {
-          font-size: 1.2rem;
-        }
-        .Chef .chef-txt h1 {
-          font-size: 1.5rem;
-        }
-        .Chef .chef-txt h3 {
-          font-size: 1.1rem;
-        }
-      }
-
-      /* Extra Small Devices (phones, 576px and down) */
-      @media screen and (max-width: 576px) {
-        .chef-member .chef-box {
-          width: 100%;
-          padding: 10px 15px;
-        }
-        .chef-box img {
-          width: 150px;
-          height: 150px;
-        }
-        .Chef .chef-txt .line {
-          width: 30px;
-        }
-        .Chef .chef-txt h1 {
-          font-size: 1.3rem;
-        }
-        .Chef .chef-txt h3 {
-          font-size: 1rem;
-        }
-      }
-      .footer {
-        background-color: #1a1a1a;
-        color: #ffffff;
-        padding: 60px 0 20px;
-        font-family: "Arial", sans-serif;
-      }
-
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 0 20px;
-      }
-
-      .footer-section {
-        flex: 1;
-        min-width: 250px;
-        margin-bottom: 30px;
-        padding: 0 15px;
-      }
-
-      .footer-section h3 {
-        color: #fff;
-        font-size: 1.4rem;
+      .filter-buttons {
         margin-bottom: 20px;
-        position: relative;
-        padding-bottom: 10px;
-      }
-
-      .footer-section h3::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 50px;
-        height: 2px;
-        background-color: #ff4d4d;
-      }
-
-      .footer-section p {
-        line-height: 1.6;
-        margin-bottom: 15px;
-        color: #b3b3b3;
-      }
-
-      /* Quick Links Styling */
-      .quick-links {
-        list-style: none;
-        padding: 0;
-      }
-
-      .quick-links li {
-        margin-bottom: 12px;
-      }
-
-      .quick-links a {
-        color: #b3b3b3;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .quick-links a:hover {
-        color: #ff4d4d;
-        padding-left: 5px;
-      }
-
-      /* Hours List Styling */
-      .hours {
-        list-style: none;
-        padding: 0;
-      }
-
-      .hours li {
-        color: #b3b3b3;
-        margin-bottom: 12px;
-      }
-
-      /* Newsletter Form Styling */
-      .newsletter-form {
-        margin-top: 20px;
-      }
-
-      .newsletter-form input {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
-        border: none;
-        background-color: #333;
-        color: #fff;
-        border-radius: 4px;
-      }
-
-      .newsletter-form button {
-        background-color: #ff4d4d;
-        color: white;
-        padding: 12px 24px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .newsletter-form button:hover {
-        background-color: #ff3333;
-      }
-
-      /* Social Icons Styling */
-      .social-icons {
-        margin-top: 20px;
-      }
-
-      .social-icons a {
-        color: #fff;
-        margin-right: 15px;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .social-icons a:hover {
-        color: #ff4d4d;
-      }
-
-      /* Contact Info Styling */
-      .contact-info p {
-        margin-bottom: 10px;
         display: flex;
-        align-items: center;
         gap: 10px;
+        flex-wrap: wrap;
       }
 
-      .contact-info i {
-        color: #ff4d4d;
+      .filter-button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: all 0.3s ease;
       }
 
-      /* Footer Bottom Bar */
-      .footer-bottom {
-        text-align: center;
-        padding-top: 20px;
-        margin-top: 40px;
-        border-top: 1px solid #333;
+      .filter-button:hover {
+        background-color: #d0d0d0;
       }
 
-      .footer-bottom p {
-        color: #b3b3b3;
-        font-size: 0.9rem;
+      .filter-button.active {
+        background-color: #007bff;
+        color: white;
       }
 
-      /* Responsive Design */
-      @media screen and (max-width: 768px) {
-        .footer-section {
-          flex: 100%;
-          margin-bottom: 40px;
-        }
+      .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
 
-        .footer-content {
-          flex-direction: column;
-        }
+      .item {
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        transition: transform 0.3s ease;
+      }
 
-        .social-icons {
-          text-align: center;
-        }
+      .item:hover {
+        transform: translateY(-5px);
+      }
 
-        .footer-section h3 {
-          text-align: center;
-        }
-
-        .footer-section h3::after {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
-        .footer-section p,
-        .contact-info,
-        .quick-links,
-        .hours {
-          text-align: center;
-        }
-
-        .contact-info p {
-          justify-content: center;
-        }
+      .hidden {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <section class="Chef" data-aos="fade-up">
-      <div class="chef-txt">
-        <div class="line-txt">
-          <span class="line"></span>
-          <h3>Team Member</h3>
-          <span class="line"></span>
-        </div>
-        <h1>Our Master Chefs</h1>
-      </div>
-      <div class="chef-member">
-        <div class="chef-box">
-          <img src="../assets/chef-img1-removebg-preview.png" alt="" />
-          <h2>Emma Lee</h2>
-        </div>
-        <div class="chef-box">
-          <img src="../assets/chef-img2-removebg-preview.png" alt="" />
-          <h2>John Baker</h2>
-        </div>
-        <div class="chef-box">
-          <img src="../assets/chef2-removebg-preview.png" alt="" />
-          <h2>Tom Hill</h2>
-        </div>
-        <div class="chef-box">
-          <img src="../assets/chef-img-3-removebg-preview.png" alt="" />
-          <h2>Diego Santiago</h2>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer-content">
-        <!-- About Section -->
-        <div class="footer-section">
-          <h3>About Us</h3>
-          <p>
-            We are passionate about delivering the best dining experience to our
-            customers. Our restaurant combines traditional flavors with modern
-            cuisine.
-          </p>
-          <div class="contact-info">
-            <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-            <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> 123 Cuisine Street, Foodie
-              City
-            </p>
-          </div>
-        </div>
-
-        <!-- Quick Links Section -->
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul class="quick-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#reservations">Reservations</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Opening Hours Section -->
-        <div class="footer-section">
-          <h3>Opening Hours</h3>
-          <ul class="hours">
-            <li>Monday - Friday: 9AM - 10PM</li>
-            <li>Saturday: 10AM - 11PM</li>
-            <li>Sunday: 10AM - 9PM</li>
-          </ul>
-        </div>
-
-        <!-- Newsletter Section -->
-        <div class="footer-section">
-          <h3>Newsletter</h3>
-          <p>Subscribe to our newsletter for updates and special offers.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-button active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="technology">
+          Technology
+        </button>
+        <button class="filter-button" data-filter="food">Food</button>
+        <button class="filter-button" data-filter="travel">Travel</button>
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="footer-bottom">
-        <p>&copy; 2025 Your Restaurant. All rights reserved.</p>
+      <div class="items">
+        <div class="item" data-category="technology">
+          <h3>Laptop</h3>
+          <p>Latest model laptop with high performance.</p>
+        </div>
+        <div class="item" data-category="food">
+          <h3>Pizza</h3>
+          <p>Delicious Italian pizza with fresh toppings.</p>
+        </div>
+        <div class="item" data-category="technology">
+          <h3>Smartphone</h3>
+          <p>Latest smartphone with amazing camera.</p>
+        </div>
+        <div class="item" data-category="travel">
+          <h3>Paris</h3>
+          <p>Beautiful city of lights and culture.</p>
+        </div>
+        <div class="item" data-category="food">
+          <h3>Sushi</h3>
+          <p>Fresh Japanese sushi rolls.</p>
+        </div>
+        <div class="item" data-category="travel">
+          <h3>Bali</h3>
+          <p>Tropical paradise with beautiful beaches.</p>
+        </div>
       </div>
-    </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const items = document.querySelectorAll(".item");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            button.classList.add("active");
+
+            const filterValue = button.getAttribute("data-filter");
+
+            items.forEach((item) => {
+              if (
+                filterValue === "all" ||
+                item.getAttribute("data-category") === filterValue
+              ) {
+                item.classList.remove("hidden");
+              } else {
+                item.classList.add("hidden");
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
