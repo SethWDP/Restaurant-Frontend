@@ -1072,9 +1072,6 @@ span {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  body {
-    background-color: green;
-  }
   nav h2 {
     width: 40%;
     display: flex;
@@ -1087,9 +1084,6 @@ span {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  body {
-    background-color: palevioletred;
-  }
   nav h2 {
     width: 30%;
     display: flex;
